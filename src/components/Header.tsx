@@ -20,6 +20,7 @@ const Header = () => {
   }, []);
 
   const handleNavigation = (href: string) => {
+    if (href === '/leads') return; // Prevent navigation to /leads
     navigate(href);
     // Scroll to top after navigation
     setTimeout(() => {
@@ -85,7 +86,7 @@ const Header = () => {
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <button
-                  onClick={() => handleNavigation(item.href)}
+                  onClick={() => !item.dropdown && handleNavigation(item.href)}
                   className={`flex items-center space-x-1 font-medium transition-colors hover:text-blue-600 ${
                     isScrolled ? 'text-gray-700' : 'text-white'
                   }`}
@@ -96,7 +97,11 @@ const Header = () => {
                 
                 {/* Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border py-2 z-50">
+                  <div 
+                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border py-2 z-50"
+                    onMouseEnter={() => setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
                     {item.dropdown.map((dropdownItem) => (
                       <button
                         key={dropdownItem.name}
@@ -134,7 +139,7 @@ const Header = () => {
             {navigation.main.map((item) => (
               <div key={item.name} className="border-b last:border-b-0 py-2">
                 <button
-                  onClick={() => handleNavigation(item.href)}
+                  onClick={() => !item.dropdown && handleNavigation(item.href)}
                   className="block w-full text-left font-medium text-gray-700 hover:text-blue-600 py-2"
                 >
                   {item.name}

@@ -134,17 +134,17 @@ const Hero = () => {
                   
                   <div>
                     <Select required>
-                      <SelectTrigger className="bg-gray-700/50 border-gray-600 text-gray-400 h-12">
+                      <SelectTrigger className="bg-gray-700/50 border-gray-600 text-white h-12">
                         <SelectValue placeholder="Select Lead Type" />
                       </SelectTrigger>
                       <SelectContent className="bg-gray-800 border-gray-700">
-                        <SelectItem value="mix">Mix Parts Only</SelectItem>
-                        <SelectItem value="engine">Engine Only</SelectItem>
-                        <SelectItem value="transmission">Transmission Only</SelectItem>
-                        <SelectItem value="brakes">Brakes Only</SelectItem>
-                        <SelectItem value="electrical">Electrical Only</SelectItem>
-                        <SelectItem value="suspension">Suspension Only</SelectItem>
-                        <SelectItem value="exhaust">Exhaust Only</SelectItem>
+                        <SelectItem value="mix" className="text-white">Mix Parts Only</SelectItem>
+                        <SelectItem value="engine" className="text-white">Engine Only</SelectItem>
+                        <SelectItem value="transmission" className="text-white">Transmission Only</SelectItem>
+                        <SelectItem value="brakes" className="text-white">Brakes Only</SelectItem>
+                        <SelectItem value="electrical" className="text-white">Electrical Only</SelectItem>
+                        <SelectItem value="suspension" className="text-white">Suspension Only</SelectItem>
+                        <SelectItem value="exhaust" className="text-white">Exhaust Only</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
