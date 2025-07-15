@@ -12,17 +12,17 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">AE</span>
+                <span className="text-white font-bold text-lg">GL</span>
               </div>
               <div>
                 <h3 className="text-xl font-bold">{siteConfig.name}</h3>
-                <p className="text-sm text-gray-400">Premium Auto Parts</p>
+                <p className="text-sm text-gray-400">Lead Generation Experts</p>
               </div>
             </div>
             
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Your trusted partner for premium drivetrain solutions since {siteConfig.business.founded}. 
-              Quality parts, expert service, unmatched performance.
+              Your trusted partner for premium auto parts lead generation since {siteConfig.business.founded}. 
+              Quality leads, expert service, unmatched performance.
             </p>
             
             {/* Contact Info */}
@@ -78,7 +78,7 @@ const Footer = () => {
             <div className="lg:flex-1">
               <h4 className="text-xl font-semibold mb-4">Stay Updated</h4>
               <p className="text-gray-300 mb-6 lg:mb-0">
-                Subscribe to our newsletter for the latest product updates, promotions, and automotive tips.
+                Subscribe to our newsletter for the latest lead generation tips, market insights, and promotional offers.
               </p>
             </div>
             <div className="lg:flex-1 lg:max-w-md lg:ml-8">

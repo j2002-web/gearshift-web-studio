@@ -59,7 +59,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">AL</span>
+              <span className="text-white font-bold text-lg">GL</span>
             </div>
             <div>
               <h1 className={`text-xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
@@ -76,12 +76,11 @@ const Header = () => {
             {navigation.main.map((item) => (
               <div
                 key={item.name}
-                className="relative"
-                onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
-                onMouseLeave={() => setActiveDropdown(null)}
+                className="relative group"
               >
                 <button
                   onClick={() => handleNavigation(item.href)}
+                  onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
                   className={`flex items-center space-x-1 font-medium transition-colors hover:text-blue-600 ${
                     isScrolled ? 'text-gray-700' : 'text-white'
                   }`}
@@ -91,13 +90,17 @@ const Header = () => {
                 </button>
                 
                 {/* Dropdown Menu */}
-                {item.dropdown && activeDropdown === item.name && (
-                  <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border py-2 z-50">
+                {item.dropdown && (
+                  <div 
+                    className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                    onMouseEnter={() => setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
                     {item.dropdown.map((dropdownItem) => (
                       <button
                         key={dropdownItem.name}
                         onClick={() => handleNavigation(dropdownItem.href)}
-                        className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                        className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
                       >
                         {dropdownItem.name}
                       </button>

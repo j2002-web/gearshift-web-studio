@@ -5,17 +5,25 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Textarea } from '@/components/ui/textarea';
 import { siteConfig } from '@/config/site';
 
 const Hero = () => {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Lead form submitted');
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-950 via-slate-900 to-purple-950">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-950 via-slate-900 to-purple-950 pt-32">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1920&h=1080&fit=crop")'
+        }}
+      ></div>
+
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-purple-600/10"></div>
@@ -27,7 +35,7 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Content */}
           <div className="text-white space-y-8">
             {/* Badge */}
@@ -37,13 +45,12 @@ const Hero = () => {
             </div>
 
             {/* Main Heading */}
-            <div className="space-y-4">
+            <div className="space-y-6">
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                Get Premium
-                <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Auto Parts Leads
+                BOOK YOUR LEADS TODAY
+                <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mt-2">
+                  That Convert Fast
                 </span>
-                That Convert
               </h1>
               <p className="text-xl text-gray-300 leading-relaxed max-w-2xl">
                 Connect with qualified buyers actively searching for auto parts. Our lead generation system delivers 
@@ -91,74 +98,87 @@ const Hero = () => {
 
           {/* Right Side - Lead Generation Form */}
           <div className="flex justify-center lg:justify-end">
-            <Card className="w-full max-w-md bg-white/95 backdrop-blur-sm border-0 shadow-2xl">
+            <Card className="w-full max-w-md bg-gray-800/90 backdrop-blur-sm border border-gray-700 shadow-2xl">
               <CardHeader className="text-center pb-4">
-                <CardTitle className="text-2xl font-bold text-gray-900">
-                  Get Free Sample Leads
+                <CardTitle className="text-2xl font-bold text-white">
+                  BOOK YOUR LEADS TODAY
                 </CardTitle>
-                <p className="text-gray-600 text-sm">
-                  Start receiving qualified auto parts leads today
-                </p>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleFormSubmit} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Full Name</Label>
-                    <Input id="name" placeholder="Enter your full name" required />
+                  <div>
+                    <Input 
+                      placeholder="Enter Your Name" 
+                      className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400 h-12"
+                      required 
+                    />
                   </div>
                   
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" required />
+                  <div>
+                    <Input 
+                      type="email" 
+                      placeholder="Enter Your E-mail" 
+                      className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400 h-12"
+                      required 
+                    />
                   </div>
                   
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" type="tel" placeholder="+1 (555) 123-4567" required />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="business">Business Type</Label>
+                  <div>
                     <Select required>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select business type" />
+                      <SelectTrigger className="bg-gray-700/50 border-gray-600 text-gray-400 h-12">
+                        <SelectValue placeholder="Country Code" />
                       </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="auto-parts-dealer">Auto Parts Dealer</SelectItem>
-                        <SelectItem value="scrap-yard">Scrap Yard</SelectItem>
-                        <SelectItem value="repair-shop">Repair Shop</SelectItem>
-                        <SelectItem value="distributor">Parts Distributor</SelectItem>
-                        <SelectItem value="other">Other</SelectItem>
+                      <SelectContent className="bg-gray-800 border-gray-700">
+                        <SelectItem value="us">🇺🇸 United States (+1)</SelectItem>
+                        <SelectItem value="ae">🇦🇪 UAE (+971)</SelectItem>
+                        <SelectItem value="in">🇮🇳 India (+91)</SelectItem>
+                        <SelectItem value="uk">🇬🇧 UK (+44)</SelectItem>
+                        <SelectItem value="ca">🇨🇦 Canada (+1)</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
                   
-                  <div className="space-y-2">
-                    <Label htmlFor="location">Target Location</Label>
+                  <div>
+                    <Input 
+                      type="tel" 
+                      placeholder="Enter Your Phone Number" 
+                      className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400 h-12"
+                      required 
+                    />
+                  </div>
+                  
+                  <div>
                     <Select required>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select target market" />
+                      <SelectTrigger className="bg-gray-700/50 border-gray-600 text-gray-400 h-12">
+                        <SelectValue placeholder="Select Package" />
                       </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="usa">United States</SelectItem>
-                        <SelectItem value="uae">United Arab Emirates</SelectItem>
-                        <SelectItem value="india">India</SelectItem>
-                        <SelectItem value="all">All Markets</SelectItem>
+                      <SelectContent className="bg-gray-800 border-gray-700">
+                        <SelectItem value="starter">Starter Package - $299</SelectItem>
+                        <SelectItem value="professional">Professional Package - $599</SelectItem>
+                        <SelectItem value="enterprise">Enterprise Package - $999</SelectItem>
+                        <SelectItem value="custom">Custom Package</SelectItem>
                       </SelectContent>
                     </Select>
+                  </div>
+                  
+                  <div>
+                    <Textarea 
+                      placeholder="Enter Your Requirement" 
+                      className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400 min-h-[80px] resize-none"
+                      rows={3}
+                    />
+                  </div>
+                  
+                  <div className="bg-gray-700/50 border border-gray-600 rounded-md p-4 h-16 flex items-center justify-center">
+                    <span className="text-gray-400 text-sm">Captcha verification</span>
                   </div>
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-md transition-all duration-300 transform hover:scale-105 h-12"
                   >
-                    Get Free Sample Leads
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    SUBMIT
                   </Button>
-                  
-                  <p className="text-xs text-gray-500 text-center">
-                    No credit card required. Get 5 free sample leads instantly.
-                  </p>
                 </form>
               </CardContent>
             </Card>

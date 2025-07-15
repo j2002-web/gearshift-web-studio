@@ -15,6 +15,10 @@ import ShippingPolicy from "./pages/ShippingPolicy";
 import NotFound from "./pages/NotFound";
 import NewParts from "./pages/leads/NewParts";
 import UsedParts from "./pages/leads/UsedParts";
+import OEMParts from "./pages/leads/OEMParts";
+import AftermarketParts from "./pages/leads/AftermarketParts";
+import PerformanceParts from "./pages/leads/PerformanceParts";
+import BulkPackages from "./pages/leads/BulkPackages";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +32,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/leads/new-parts" element={<NewParts />} />
           <Route path="/leads/used-parts" element={<UsedParts />} />
+          <Route path="/leads/oem-parts" element={<OEMParts />} />
+          <Route path="/leads/aftermarket" element={<AftermarketParts />} />
+          <Route path="/leads/performance" element={<PerformanceParts />} />
+          <Route path="/leads/bulk-packages" element={<BulkPackages />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />

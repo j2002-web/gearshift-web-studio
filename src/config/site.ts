@@ -1,10 +1,10 @@
 
 export const siteConfig = {
-  name: "AutoLeadPro",
-  brand: "autoleadpro",
+  name: "GearLeads",
+  brand: "gearleads",
   description: "Premium Auto Parts Lead Generation Services",
-  url: "https://autoleadpro.com",
-  email: "support@autoleadpro.site",
+  url: "https://gearleads.com",
+  email: "support@gearleads.com",
   phone: "+1 (555) 247-8963",
   address: {
     street: "1247 Industrial Drive",
@@ -14,10 +14,10 @@ export const siteConfig = {
     country: "United States"
   },
   social: {
-    facebook: "https://facebook.com/autoleadpro",
-    twitter: "https://twitter.com/autoleadpro",
-    instagram: "https://instagram.com/autoleadpro",
-    linkedin: "https://linkedin.com/company/autoleadpro"
+    facebook: "https://facebook.com/gearleads",
+    twitter: "https://twitter.com/gearleads",
+    instagram: "https://instagram.com/gearleads",
+    linkedin: "https://linkedin.com/company/gearleads"
   },
   business: {
     hours: "Monday - Friday: 8:00 AM - 6:00 PM",
@@ -39,6 +39,7 @@ export const navigation = {
         { name: "Used Auto Parts Leads", href: "/leads/used-parts" },
         { name: "OEM Parts Leads", href: "/leads/oem-parts" },
         { name: "Aftermarket Parts Leads", href: "/leads/aftermarket" },
+        { name: "Performance Parts Leads", href: "/leads/performance" },
         { name: "Bulk Lead Packages", href: "/leads/bulk-packages" }
       ]
     },
@@ -53,7 +54,8 @@ export const navigation = {
         { name: "New Auto Parts Leads", href: "/leads/new-parts" },
         { name: "Used Auto Parts Leads", href: "/leads/used-parts" },
         { name: "OEM Parts Leads", href: "/leads/oem-parts" },
-        { name: "Aftermarket Parts Leads", href: "/leads/aftermarket" }
+        { name: "Aftermarket Parts Leads", href: "/leads/aftermarket" },
+        { name: "Performance Parts Leads", href: "/leads/performance" }
       ]
     },
     {
