@@ -1,10 +1,10 @@
 
 export const siteConfig = {
-  name: "AutoElite Parts",
-  brand: "autoeliteparts",
-  description: "Premium Automotive Parts & Drivetrain Solutions",
-  url: "https://autoeliteparts.com",
-  email: "support@autoeliteparts.site",
+  name: "AutoLeadPro",
+  brand: "autoleadpro",
+  description: "Premium Auto Parts Lead Generation Services",
+  url: "https://autoleadpro.com",
+  email: "support@autoleadpro.site",
   phone: "+1 (555) 247-8963",
   address: {
     street: "1247 Industrial Drive",
@@ -14,17 +14,17 @@ export const siteConfig = {
     country: "United States"
   },
   social: {
-    facebook: "https://facebook.com/autoeliteparts",
-    twitter: "https://twitter.com/autoeliteparts",
-    instagram: "https://instagram.com/autoeliteparts",
-    linkedin: "https://linkedin.com/company/autoeliteparts"
+    facebook: "https://facebook.com/autoleadpro",
+    twitter: "https://twitter.com/autoleadpro",
+    instagram: "https://instagram.com/autoleadpro",
+    linkedin: "https://linkedin.com/company/autoleadpro"
   },
   business: {
     hours: "Monday - Friday: 8:00 AM - 6:00 PM",
     weekend: "Saturday: 9:00 AM - 4:00 PM",
     founded: "2010",
     employees: "50+",
-    certifications: ["ISO 9001", "QS-9000", "TS 16949"]
+    certifications: ["ISO 9001", "Google Partner", "Facebook Marketing Partner"]
   }
 };
 
@@ -32,62 +32,53 @@ export const navigation = {
   main: [
     { name: "Home", href: "/" },
     { 
-      name: "Products", 
-      href: "/products",
+      name: "Leads", 
+      href: "/leads",
       dropdown: [
-        { name: "Drivetrains", href: "/products/drivetrains" },
-        { name: "Transmissions", href: "/products/transmissions" },
-        { name: "Axles & Differentials", href: "/products/axles" },
-        { name: "CV Joints", href: "/products/cv-joints" },
-        { name: "Drive Shafts", href: "/products/drive-shafts" }
+        { name: "New Auto Parts Leads", href: "/leads/new-parts" },
+        { name: "Used Auto Parts Leads", href: "/leads/used-parts" },
+        { name: "OEM Parts Leads", href: "/leads/oem-parts" },
+        { name: "Aftermarket Parts Leads", href: "/leads/aftermarket" },
+        { name: "Bulk Lead Packages", href: "/leads/bulk-packages" }
       ]
     },
-    { 
-      name: "Services", 
-      href: "/services",
-      dropdown: [
-        { name: "Installation", href: "/services/installation" },
-        { name: "Repair", href: "/services/repair" },
-        { name: "Maintenance", href: "/services/maintenance" },
-        { name: "Consultation", href: "/services/consultation" }
-      ]
-    },
+    { name: "Pricing", href: "/pricing" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" }
   ],
   footer: [
     {
-      title: "Products",
+      title: "Lead Services",
       links: [
-        { name: "Drivetrains", href: "/products/drivetrains" },
-        { name: "Transmissions", href: "/products/transmissions" },
-        { name: "Axles & Differentials", href: "/products/axles" },
-        { name: "CV Joints", href: "/products/cv-joints" }
+        { name: "New Auto Parts Leads", href: "/leads/new-parts" },
+        { name: "Used Auto Parts Leads", href: "/leads/used-parts" },
+        { name: "OEM Parts Leads", href: "/leads/oem-parts" },
+        { name: "Aftermarket Parts Leads", href: "/leads/aftermarket" }
       ]
     },
     {
-      title: "Services", 
+      title: "Solutions", 
       links: [
-        { name: "Installation", href: "/services/installation" },
-        { name: "Repair", href: "/services/repair" },
-        { name: "Maintenance", href: "/services/maintenance" },
-        { name: "Consultation", href: "/services/consultation" }
+        { name: "Lead Generation", href: "/solutions/lead-generation" },
+        { name: "CRM Integration", href: "/solutions/crm" },
+        { name: "Analytics Dashboard", href: "/solutions/analytics" },
+        { name: "API Access", href: "/solutions/api" }
       ]
     },
     {
       title: "Company",
       links: [
         { name: "About Us", href: "/about" },
+        { name: "Pricing", href: "/pricing" },
         { name: "Contact", href: "/contact" },
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms & Conditions", href: "/terms" }
+        { name: "Privacy Policy", href: "/privacy" }
       ]
     },
     {
       title: "Policies",
       links: [
+        { name: "Terms & Conditions", href: "/terms" },
         { name: "Return Policy", href: "/return-policy" },
-        { name: "Shipping Policy", href: "/shipping-policy" },
         { name: "Disclaimer", href: "/disclaimer" }
       ]
     }

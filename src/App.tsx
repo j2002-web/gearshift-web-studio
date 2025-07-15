@@ -13,6 +13,8 @@ import Disclaimer from "./pages/Disclaimer";
 import ReturnPolicy from "./pages/ReturnPolicy";
 import ShippingPolicy from "./pages/ShippingPolicy";
 import NotFound from "./pages/NotFound";
+import NewParts from "./pages/leads/NewParts";
+import UsedParts from "./pages/leads/UsedParts";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +26,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/leads/new-parts" element={<NewParts />} />
+          <Route path="/leads/used-parts" element={<UsedParts />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
