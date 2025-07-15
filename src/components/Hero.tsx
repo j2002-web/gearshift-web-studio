@@ -124,21 +124,6 @@ const Hero = () => {
                   </div>
                   
                   <div>
-                    <Select required>
-                      <SelectTrigger className="bg-gray-700/50 border-gray-600 text-gray-400 h-12">
-                        <SelectValue placeholder="Country Code" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-gray-800 border-gray-700">
-                        <SelectItem value="us">🇺🇸 United States (+1)</SelectItem>
-                        <SelectItem value="ae">🇦🇪 UAE (+971)</SelectItem>
-                        <SelectItem value="in">🇮🇳 India (+91)</SelectItem>
-                        <SelectItem value="uk">🇬🇧 UK (+44)</SelectItem>
-                        <SelectItem value="ca">🇨🇦 Canada (+1)</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-                  
-                  <div>
                     <Input 
                       type="tel" 
                       placeholder="Enter Your Phone Number" 
@@ -150,13 +135,16 @@ const Hero = () => {
                   <div>
                     <Select required>
                       <SelectTrigger className="bg-gray-700/50 border-gray-600 text-gray-400 h-12">
-                        <SelectValue placeholder="Select Package" />
+                        <SelectValue placeholder="Select Lead Type" />
                       </SelectTrigger>
                       <SelectContent className="bg-gray-800 border-gray-700">
-                        <SelectItem value="starter">Starter Package - $299</SelectItem>
-                        <SelectItem value="professional">Professional Package - $599</SelectItem>
-                        <SelectItem value="enterprise">Enterprise Package - $999</SelectItem>
-                        <SelectItem value="custom">Custom Package</SelectItem>
+                        <SelectItem value="mix">Mix Parts Only</SelectItem>
+                        <SelectItem value="engine">Engine Only</SelectItem>
+                        <SelectItem value="transmission">Transmission Only</SelectItem>
+                        <SelectItem value="brakes">Brakes Only</SelectItem>
+                        <SelectItem value="electrical">Electrical Only</SelectItem>
+                        <SelectItem value="suspension">Suspension Only</SelectItem>
+                        <SelectItem value="exhaust">Exhaust Only</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -167,10 +155,6 @@ const Hero = () => {
                       className="bg-gray-700/50 border-gray-600 text-white placeholder:text-gray-400 min-h-[80px] resize-none"
                       rows={3}
                     />
-                  </div>
-                  
-                  <div className="bg-gray-700/50 border border-gray-600 rounded-md p-4 h-16 flex items-center justify-center">
-                    <span className="text-gray-400 text-sm">Captcha verification</span>
                   </div>
                   
                   <Button 

@@ -8,6 +8,7 @@ import UsedPartsSection from '@/components/UsedPartsSection';
 import RiskFreeSection from '@/components/RiskFreeSection';
 import Pricing from '@/components/Pricing';
 import FAQ from '@/components/FAQ';
+import ReadyToTransform from '@/components/ReadyToTransform';
 import GetInTouch from '@/components/GetInTouch';
 import Footer from '@/components/Footer';
 
@@ -23,6 +24,7 @@ const Index = () => {
       <RiskFreeSection />
       <Pricing />
       <FAQ />
+      <ReadyToTransform />
       <GetInTouch />
       <Footer />
     </div>

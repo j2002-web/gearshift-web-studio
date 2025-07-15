@@ -1,9 +1,14 @@
 
-import { Check, Star, Zap } from 'lucide-react';
+import { Check, Star, Zap, Phone } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { siteConfig } from '@/config/site';
 
 const Pricing = () => {
+  const handleCallNow = () => {
+    window.open(`tel:${siteConfig.phone}`, '_self');
+  };
+
   const plans = [
     {
       name: "Starter",
@@ -120,8 +125,12 @@ const Pricing = () => {
                   ))}
                 </ul>
                 
-                <Button className={`w-full bg-gradient-to-r ${plan.color} hover:opacity-90 text-white font-semibold py-3`}>
-                  Get Started
+                <Button 
+                  onClick={handleCallNow}
+                  className={`w-full bg-gradient-to-r ${plan.color} hover:opacity-90 text-white font-semibold py-3 flex items-center justify-center space-x-2`}
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>Call Now</span>
                 </Button>
               </CardContent>
             </Card>
